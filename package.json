@@ -1,0 +1,19 @@
+{
+  "name": "tvquotes",
+  "version": "1.0.0",
+  "description": "Returns a random quote from the specified TV Show",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Oliver Westenra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

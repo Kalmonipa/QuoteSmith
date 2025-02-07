@@ -23,14 +23,19 @@ app.get("/:filename", (req, res) => {
             return res.status(404).json({ error: "TV Show not found" });
         }
 
-        // Read the file contents
-        fs.readFile(filePath, "utf8", (err, data) => {
-            if (err) {
-                return res.status(500).json({ error: "Error reading file" });
-            }
-            res.json({ content: data });
-        });
+        // // Read the file contents
+        // fs.readFile(filePath, "utf8", (err, data) => {
+        //     if (err) {
+        //         return res.status(500).json({ error: "Error reading file" });
+        //     }
+        //     res.json({ content: data });
+        // });
     });
+
+    fs.readFile(filePath, (err, data) => {
+        if (err) throw err;
+        res.json(data);
+      }); 
 });
 
 if (require.main === module) {

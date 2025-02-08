@@ -49,6 +49,7 @@ app.get("/:filename", async (req, res) => {
             return res.status(400).json({ error: "Path should not contain the file extension" });
         }
 
+        // ToDo: lowercase filenames only
         const filePath = path.join(DATA_DIR, `${filename}.txt`);
         const randomLine = await getRandomLine(filePath);
 

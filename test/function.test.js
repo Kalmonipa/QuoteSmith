@@ -7,6 +7,8 @@ jest.mock('fs', () => ({
     }
 }));
 
+// ToDo: Add tests for parse function
+
 describe("getRandomLine", () => {
     afterEach(() => {
         jest.clearAllMocks(); // Reset mock calls after each test

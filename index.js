@@ -13,29 +13,21 @@ app.get("/:filename", (req, res) => {
     const filePath = path.join(DATA_DIR, filenameExt);
 
     // Check if the file has a .txt extension
-    if (path.extname(filename) === ".txt") {
+    if (path.extname(filename)) {
         return res.status(400).json({ error: "Path should not contain the file extension" });
     }
 
     // Check if the file exists
     fs.access(filePath, fs.constants.F_OK, (err) => {
         if (err) {
-            return res.status(404).json({ error: "TV Show not found" });
+            return res.status(404).json({ error: "File not found" });
         }
 
-        // // Read the file contents
-        // fs.readFile(filePath, "utf8", (err, data) => {
-        //     if (err) {
-        //         return res.status(500).json({ error: "Error reading file" });
-        //     }
-        //     res.json({ content: data });
-        // });
+        fs.readFile(filePath, 'utf-8', (err, data) => {
+            if (err) return res.status(500).json({ error: err});
+            res.json({content: data});
+          }); 
     });
-
-    fs.readFile(filePath, (err, data) => {
-        if (err) throw err;
-        res.json(data);
-      }); 
 });
 
 if (require.main === module) {

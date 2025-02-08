@@ -11,8 +11,16 @@ const DATA_DIR = path.join(__dirname, "data");
 // Author/Character/Verse etc listed first. A hypen - signifies the end of the author portion and 
 // beginning of the quote. The quote does not need to be wrapped in quotes but looks nicer if it is.
 // Author - "Quote"
-function parseQuote() {
+// This function returns an array containing the author and the quote.
+function parse(quote) {
+    const strArray = quote.split("-");
+    const trimmedArray = strArray.map(item => item.trim());
 
+    if (strArray.length != 2) {
+        throw new Error("Invalid quote format")
+    }
+
+    return trimmedArray;
 }
 
 async function getRandomLine(filePath) {
@@ -44,8 +52,10 @@ app.get("/:filename", async (req, res) => {
         const filePath = path.join(DATA_DIR, `${filename}.txt`);
         const randomLine = await getRandomLine(filePath);
 
-        return res.json({ content: randomLine });
-    } catch (error) {        
+        const parsedLine = parse(randomLine)
+
+        return res.json({ author: parsedLine[0], quote: parsedLine[1] });
+    } catch (error) {   
         if (error.message.includes("not found")) {
             return res.status(404).json({ error: error.message });
         }
@@ -53,7 +63,7 @@ app.get("/:filename", async (req, res) => {
             return res.status(400).json({ error: error.message });
         }
 
-        return res.status(500).json({ error: "Internal server error." });
+        return res.status(500).json({ error: "Internal server error.", message: error.message });
     }
 });
 

@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../index");
+const { app } = require("../index");
 
 describe("GET /:filename", () => {
     test("should return file contents for a valid .txt file", async () => {

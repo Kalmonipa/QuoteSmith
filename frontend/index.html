@@ -23,8 +23,8 @@
 </head>
 <body>
     <h1>QuoteSmith</h1>
-    <label for="category">Enter Category:</label>
-    <input type="text" id="category" placeholder="spongebob">
+    <label for="category">Select Category:</label>
+    <select id="category"></select>
     <button onclick="fetchQuote()">Get Quote</button>
 
     <div id="quote-container">
@@ -33,15 +33,34 @@
     </div>
 
     <script>
+        async function fetchCategories() {
+            try {
+                const response = await fetch("/categories");
+                const data = await response.json();
+                const categorySelect = document.getElementById("category");
+
+                if (data.categories.length === 0) {
+                    categorySelect.innerHTML = '<option value="">No categories available</option>';
+                    return;
+                }
+
+                categorySelect.innerHTML = data.categories
+                    .map(cat => `<option value="${cat}">${cat}</option>`)
+                    .join("");
+            } catch (error) {
+                console.error("Error fetching categories:", error);
+            }
+        }
+
         async function fetchQuote() {
-            const category = document.getElementById("category").value.trim();
+            const category = document.getElementById("category").value;
             if (!category) {
-                alert("Please enter a category!");
+                alert("Please select a category!");
                 return;
             }
 
             try {
-                const response = await fetch(`/${category}`);
+                const response = await fetch(`/quotes/${category}`);
                 if (!response.ok) {
                     throw new Error("Category not found.");
                 }
@@ -53,6 +72,8 @@
                 document.getElementById("quote").textContent = error.message;
             }
         }
+
+        window.onload = fetchCategories;
     </script>
 </body>
 </html>

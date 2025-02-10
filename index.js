@@ -10,20 +10,41 @@ const DOMAIN_URL = process.env.DOMAIN_URL || "localhost";
 const DEFAULT_DATA_DIR = path.join(__dirname, "data");
 const USER_DATA_DIR = path.join(__dirname, "user-data");
 
-// Quotes in .txt files should be formatted as following
-// Author/Character/Verse etc listed first. A hyphen - signifies the end of the author portion and 
-// beginning of the quote. The quote does not need to be wrapped in quotes but looks nicer if it is.
-// Author - "Quote"
-// This function returns an array containing the author and the quote.
-function parse(quote) {
-    const strArray = quote.split("-");
-    const trimmedArray = strArray.map(item => item.trim());
+/////
+// Functions
+/////
 
-    if (strArray.length !== 2) {
-        throw new Error("Invalid quote format");
+async function findFile(filename) {
+    const userFilePath = path.join(USER_DATA_DIR, `${filename}.txt`);
+    const defaultFilePath = path.join(DEFAULT_DATA_DIR, `${filename}.txt`);
+
+    try {
+        await fs.access(userFilePath);
+        return userFilePath;
+    } catch (err) {}
+
+    try {
+        await fs.access(defaultFilePath);
+        return defaultFilePath;
+    } catch (err) {}
+
+    throw new Error("Error reading file: File not found");
+}
+
+async function getCategories() {
+    try {
+        const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
+        const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
+
+        const categories = [...new Set([...defaultFiles, ...userFiles])]
+            .filter(file => file.endsWith(".txt"))
+            .map(file => path.basename(file, ".txt"));
+
+        return categories;
+    } catch (err) {
+        console.error("Error reading categories:", err);
+        return [];
     }
-
-    return trimmedArray;
 }
 
 async function getRandomLine(filePath) {
@@ -44,25 +65,27 @@ async function getRandomLine(filePath) {
     }
 }
 
-async function findFile(filename) {
-    const userFilePath = path.join(USER_DATA_DIR, `${filename}.txt`);
-    const defaultFilePath = path.join(DEFAULT_DATA_DIR, `${filename}.txt`);
+// Quotes in .txt files should be formatted as following
+// Author/Character/Verse etc listed first. A hyphen - signifies the end of the author portion and 
+// beginning of the quote. The quote does not need to be wrapped in quotes but looks nicer if it is.
+// Author - "Quote"
+// This function returns an array containing the author and the quote.
+function parse(quote) {
+    const strArray = quote.split("-");
+    const trimmedArray = strArray.map(item => item.trim());
 
-    try {
-        await fs.access(userFilePath);
-        return userFilePath;
-    } catch (err) {}
+    if (strArray.length !== 2) {
+        throw new Error("Invalid quote format");
+    }
 
-    try {
-        await fs.access(defaultFilePath);
-        return defaultFilePath;
-    } catch (err) {}
-
-    throw new Error("Error reading file: File not found");
+    return trimmedArray;
 }
 
+/////
+// Endpoints
+/////
 
-app.get("/:filename", async (req, res) => {
+app.get("/quotes/:filename", async (req, res) => {
     try {
         const { filename } = req.params;
 
@@ -86,6 +109,13 @@ app.get("/:filename", async (req, res) => {
         return res.status(500).json({ error: "Internal server error.", message: error.message });
     }
 });
+
+
+app.get("/categories", async (req, res) => {
+    const categories = await getCategories();
+    res.json({ categories });
+});
+
 
 app.use(express.static(path.join(__dirname, "frontend")));
 

@@ -6,8 +6,8 @@ It uses .txt files as the source of quotes and the associated authors. Feel free
 submit a PR to add/update pre-existing files.
 
 There are 2 endpoints available for the API.
-- /list - lists the names of media available (i.e. rickandmorty, spongebob, etc).
-- /quotes/[Show Name] - returns a random quote from the show/movie/etc
+- `/list` - lists the names of media available (i.e. rickandmorty, spongebob, etc).
+- `/quotes/[Show Name]` - returns a random quote from the show/movie/etc
 
 ### To add quotes
 Add a .txt file into the `data` folder with the name of the TV Show/Movie/Book etc that it comes from. You will then be able to
@@ -37,7 +37,7 @@ I can then get a random quote from the list by hitting the endpoint `/quotes/ric
 The recommended way to run is via a Docker container. Refer to [docker-compose.yml] for an example compose file.
 
 To add your own custom quotes, map a directory to the specified path in the container and add in the .txt files with the quotes. 
-They must be in the format specified below.
+They must be in the format specified above.
 
 ## Running locally
 Pull the repo and run `npm start`.

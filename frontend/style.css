@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #8FBC8F;
+}
+
+#quote-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+}
+
+#quote {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+#author {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer i {
+    font-size: 30px;
+}

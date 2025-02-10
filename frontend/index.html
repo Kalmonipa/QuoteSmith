@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteSmith</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #quote-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>QuoteSmith</h1>
+    <label for="category">Enter Category:</label>
+    <input type="text" id="category" placeholder="spongebob">
+    <button onclick="fetchQuote()">Get Quote</button>
+
+    <div id="quote-container">
+        <p><strong>Author:</strong> <span id="author"></span></p>
+        <p><strong>Quote:</strong> <span id="quote"></span></p>
+    </div>
+
+    <script>
+        async function fetchQuote() {
+            const category = document.getElementById("category").value.trim();
+            if (!category) {
+                alert("Please enter a category!");
+                return;
+            }
+
+            try {
+                const response = await fetch(`/${category}`);
+                if (!response.ok) {
+                    throw new Error("Category not found.");
+                }
+                const data = await response.json();
+                document.getElementById("author").textContent = data.author;
+                document.getElementById("quote").textContent = data.quote;
+            } catch (error) {
+                document.getElementById("author").textContent = "";
+                document.getElementById("quote").textContent = error.message;
+            }
+        }
+    </script>
+</body>
+</html>

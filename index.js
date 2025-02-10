@@ -87,6 +87,8 @@ app.get("/:filename", async (req, res) => {
     }
 });
 
+app.use(express.static(path.join(__dirname, "frontend")));
+
 if (require.main === module) {
     app.listen(PORT, () => {
         console.log(`Server running on http://${DOMAIN_URL}:${PORT}`);

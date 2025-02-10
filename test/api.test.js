@@ -18,7 +18,7 @@ describe("GET /:filename", () => {
         
         fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
     
-        const res = await request(app).get("/sample");
+        const res = await request(app).get("/quotes/sample");
 
         expect(res.statusCode).toBe(200);
         expect(res.body).toHaveProperty("author");
@@ -34,7 +34,7 @@ describe("GET /:filename", () => {
         
         fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
     
-        const res = await request(app).get("/sample");
+        const res = await request(app).get("/quotes/sample");
 
         expect(res.statusCode).toBe(200);
         expect(res.body).toHaveProperty("author");
@@ -50,7 +50,7 @@ describe("GET /:filename", () => {
         
         fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
     
-        const res = await request(app).get("/sample");
+        const res = await request(app).get("/quotes/sample");
 
         expect(res.statusCode).toBe(200);
         expect(res.body).toHaveProperty("author");
@@ -66,7 +66,7 @@ describe("GET /:filename", () => {
         
         fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
     
-        const res = await request(app).get("/sample");
+        const res = await request(app).get("/quotes/sample");
     
         expect(res.statusCode).toBe(500);
         expect(res.body.message).toBe("Invalid quote format");
@@ -79,7 +79,7 @@ describe("GET /:filename", () => {
 
         fs.readFile.mockResolvedValue(mockFileContent);
 
-        const res = await request(app).get("/sample");
+        const res = await request(app).get("/quotes/sample");
 
         expect(res.statusCode).toBe(500);
         expect(res.body.message).toBe("Invalid quote format")
@@ -90,19 +90,19 @@ describe("GET /:filename", () => {
     test("should return 404 for missing files", async () => {
         fs.readFile.mockRejectedValue(new Error("File not found"));
 
-        const res = await request(app).get("/missing");
+        const res = await request(app).get("/quotes/missing");
         expect(res.statusCode).toBe(404);
         expect(res.body).toEqual({ error: "Error reading file: File not found" });
     });
 
     test("should return 400 for a request containing a .txt endpoint", async () => {
-        const res = await request(app).get("/sample.txt");
+        const res = await request(app).get("/quotes/sample.txt");
         expect(res.statusCode).toBe(400);
         expect(res.body).toEqual({ error: "Path should not contain the file extension" });
     });
 
     test("should return 400 for a request containing a .json endpoint", async () => {
-        const res = await request(app).get("/sample.json");
+        const res = await request(app).get("/quotes/sample.json");
         expect(res.statusCode).toBe(400);
         expect(res.body).toEqual({ error: "Path should not contain the file extension" });
     });

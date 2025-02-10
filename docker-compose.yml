@@ -1,0 +1,10 @@
+services:
+  quotesmith:
+    container_name: quotesmith
+    image: kalmonipa/quotesmith:v0.0.2
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      # Map a directory to /app/user-data to add your own quotes
+      - ~/Docker/QuoteSmith/data:/app/user-data

@@ -1,7 +1,7 @@
 services:
   quotesmith:
     container_name: quotesmith
-    image: kalmonipa/quotesmith:v0.0.2
+    image: kalmonipa/quotesmith:v0.0.5
     restart: unless-stopped
     ports:
       - 3000:3000

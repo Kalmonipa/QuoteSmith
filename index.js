@@ -110,7 +110,6 @@ app.get("/quotes/:filename", async (req, res) => {
     }
 });
 
-
 app.get("/categories", async (req, res) => {
     const categories = await getCategories();
     res.json({ categories });

@@ -18,7 +18,23 @@
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
+            background-color: #f9f9f9;
         }
+
+        #quote {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+
+        #author {
+            display: block;
+            text-align: right;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -28,8 +44,8 @@
     <button onclick="fetchQuote()">Get Quote</button>
 
     <div id="quote-container">
-        <p><strong>Author:</strong> <span id="author"></span></p>
-        <p><strong>Quote:</strong> <span id="quote"></span></p>
+        <p id="quote"></p>
+        <span id="author"></span>
     </div>
 
     <script>

@@ -14,8 +14,10 @@ describe("GET /:filename", () => {
         // ToDo: The next few lines are repeated for a few tests. Tidy them up to DRY
         const mockFileContent = "John Doe - Test quote";
 
-        fs.readFile.mockResolvedValue(mockFileContent);
-
+        fs.access = jest.fn().mockResolvedValue(undefined);
+        
+        fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
+    
         const res = await request(app).get("/sample");
 
         expect(res.statusCode).toBe(200);
@@ -28,8 +30,10 @@ describe("GET /:filename", () => {
     test("should return file contents for a single quoted .txt file", async () => {
         const mockFileContent = "John Doe - 'Test quote'";
 
-        fs.readFile.mockResolvedValue(mockFileContent);
-
+        fs.access = jest.fn().mockResolvedValue(undefined);
+        
+        fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
+    
         const res = await request(app).get("/sample");
 
         expect(res.statusCode).toBe(200);
@@ -42,8 +46,10 @@ describe("GET /:filename", () => {
     test("should return file contents for a double quoted .txt file", async () => {
         const mockFileContent = "John Doe - \"Test quote\"";
 
-        fs.readFile.mockResolvedValue(mockFileContent);
-
+        fs.access = jest.fn().mockResolvedValue(undefined);
+        
+        fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
+    
         const res = await request(app).get("/sample");
 
         expect(res.statusCode).toBe(200);
@@ -55,13 +61,15 @@ describe("GET /:filename", () => {
 
     test("should throw an error for an invalid .txt file", async () => {
         const mockFileContent = "John Doe . Test quote";
-
-        fs.readFile.mockResolvedValue(mockFileContent);
-
+    
+        fs.access = jest.fn().mockResolvedValue(undefined);
+        
+        fs.readFile = jest.fn().mockResolvedValue(mockFileContent);
+    
         const res = await request(app).get("/sample");
-
+    
         expect(res.statusCode).toBe(500);
-        expect(res.body.message).toBe("Invalid quote format")
+        expect(res.body.message).toBe("Invalid quote format");
         expect(res.body).not.toHaveProperty("author");
         expect(res.body).not.toHaveProperty("quote");
     });

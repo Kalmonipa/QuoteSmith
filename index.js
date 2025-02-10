@@ -58,7 +58,7 @@ async function findFile(filename) {
         return defaultFilePath;
     } catch (err) {}
 
-    throw new Error("File not found");
+    throw new Error("Error reading file: File not found");
 }
 
 
@@ -70,7 +70,6 @@ app.get("/:filename", async (req, res) => {
             return res.status(400).json({ error: "Path should not contain the file extension" });
         }
 
-        // Find the file in user or default directories
         const filePath = await findFile(filename);
         const randomLine = await getRandomLine(filePath);
         const parsedLine = parse(randomLine);

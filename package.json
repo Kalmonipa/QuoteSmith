@@ -1,7 +1,7 @@
 {
-  "name": "tvquotes",
+  "name": "quotesmith",
   "version": "1.0.0",
-  "description": "Returns a random quote from the specified TV Show",
+  "description": "Returns a random quote from the specified media",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -18,5 +18,8 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.9",
     "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": "16"
   }
 }

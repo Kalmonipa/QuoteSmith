@@ -33,7 +33,11 @@
                 }
 
                 categorySelect.innerHTML = data.categories
-                    .map(cat => `<option value="${cat}">${cat}</option>`)
+                    .map(cat => {
+                        // Replace underscores with spaces and capitalize each word
+                        return `<option value="${cat}">${cat.replace(/_/g, ' ')
+                    .replace(/\b\w/g, char => char.toUpperCase())}</option>`;
+                    })
                     .join("");
             } catch (error) {
                 console.error("Error fetching categories:", error);

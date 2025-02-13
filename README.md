@@ -6,7 +6,7 @@ It uses .txt files as the source of quotes and the associated authors. Feel free
 submit a PR to add/update pre-existing files.
 
 There are 2 endpoints available for the API.
-- `/list` - lists the names of media available (i.e. rickandmorty, spongebob, etc).
+- `/categories` - lists the names of media available (i.e. rickandmorty, spongebob, etc).
 - `/quotes/[Show Name]` - returns a random quote from the show/movie/etc
 
 ### To add quotes

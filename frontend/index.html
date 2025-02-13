@@ -33,7 +33,11 @@
                 }
 
                 categorySelect.innerHTML = data.categories
-                    .map(cat => `<option value="${cat}">${cat}</option>`)
+                    .map(cat => {
+                        // Replace underscores with spaces and capitalize each word
+                        return `<option value="${cat}">${cat.replace(/_/g, ' ')
+                    .replace(/\b\w/g, char => char.toUpperCase())}</option>`;
+                    })
                     .join("");
             } catch (error) {
                 console.error("Error fetching categories:", error);
@@ -63,10 +67,14 @@
 
         window.onload = fetchCategories;
     </script>
+
 </body>
-<footer style="text-align: center; margin-top: 20px;">
+<footer>
     <a href="https://github.com/Kalmonipa/QuoteSmith" target="_blank">
       <i class="fab fa-github"></i>
     </a>
+    <p>
+        There's also an API! https://quotesmith.net/categories or /quotes/{category}
+    </p>
 </footer>
 </html>

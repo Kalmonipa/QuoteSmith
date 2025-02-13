@@ -38,7 +38,8 @@ async function getCategories() {
 
         const categories = [...new Set([...defaultFiles, ...userFiles])]
             .filter(file => file.endsWith(".txt"))
-            .map(file => path.basename(file, ".txt"));
+            .map(file => path.basename(file, ".txt"))
+            .sort();
 
         return categories;
     } catch (err) {
@@ -124,4 +125,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { app, getRandomLine, findFile };
+module.exports = { app, getRandomLine, findFile, getCategories };

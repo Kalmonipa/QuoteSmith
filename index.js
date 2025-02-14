@@ -62,9 +62,7 @@ async function getRandomLine(filePath) {
             throw new Error("File is empty");
         }
 
-        const foundLine = lines[Math.floor(Math.random() * lines.length)];
-
-        return foundLine
+        return lines[Math.floor(Math.random() * lines.length)];
     } catch (error) {
         if (error.code === "ENOENT") {
             throw new Error("File not found");

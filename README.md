@@ -15,26 +15,10 @@ send a request to the webserver with the path being the name of the file without
 
 The strings must match this format:
 `[Author] [Hyphen] [Quote]`
-
-For example:
-I add a file named rickandmorty.txt with the following contents. 
-```
-Rick Sanchez - "Wubba lubba dub dub!"
-Morty Smith - "I'm not a bad guy! I'm just a kid, Rick!"
-Rick Sanchez - "You’re right, Morty. The world is just a big, giant, chaotic mess of meaninglessness. But that’s what makes it beautiful!"
-Rick Sanchez - "Sometimes science is more art than science, Morty. A lot of people don’t get that."
-```
-
-I can then get a random quote from the list by hitting the endpoint `/quotes/rickandmorty` and getting the following response:
-```
-{
-    "author":"Morty Smith",
-    "quote":"\"I'm not a bad guy! I'm just a kid, Rick!\""
-}
-```
+Refer to the `data/` folder for examples.
 
 ### Self hosting
-The recommended way to run is via a Docker container. Refer to [docker-compose.yml] for an example compose file.
+The recommended way to run is via a Docker container. Refer to [docker-compose.yml](docker-compose.yml) for an example compose file.
 
 To add your own custom quotes, map a directory to the specified path in the container and add in the .txt files with the quotes. 
 They must be in the format specified above.
@@ -45,5 +29,5 @@ Pull the repo and run `npm start`.
 To run it in dev mode, use `npm run dev` which will restart the app when file changes are detected.
 
 ### Testing
-There are unit tests which can be run by running `npm test`. If you are submitting a PR that changes logic, please add tests 
+There are tests which can be run by running `npm test`. If you are submitting a PR that changes logic, please add tests 
 for your code and make sure all tests pass.

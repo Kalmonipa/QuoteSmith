@@ -2,6 +2,8 @@
 
 A customisable webserver that returns a random quote from the specified TV Show/Movie/Book/etc.
 
+Running example is at https://quotesmith.net.
+
 It uses .txt files as the source of quotes and the associated authors. Feel free to add your own .txt files if self hosting or 
 submit a PR to add/update pre-existing files.
 

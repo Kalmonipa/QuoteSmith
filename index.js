@@ -37,7 +37,12 @@ async function getCategories() {
         const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
 
         const categories = [...new Set([...defaultFiles, ...userFiles])]
-            .filter(file => file.endsWith(".txt"))
+            .filter(file => {
+                if (file.endsWith(".txt")) {
+                    logMessage("Found file: " + file)
+                    return true;
+                } else return false
+            })
             .map(file => path.basename(file, ".txt"))
             .sort();
 
@@ -57,13 +62,26 @@ async function getRandomLine(filePath) {
             throw new Error("File is empty");
         }
 
-        return lines[Math.floor(Math.random() * lines.length)];
-    } catch (err) {
-        if (err.code === "ENOENT") {
+        const foundLine = lines[Math.floor(Math.random() * lines.length)];
+
+        return foundLine
+    } catch (error) {
+        if (error.code === "ENOENT") {
             throw new Error("File not found");
         }
-        throw new Error(`Error reading file: ${err.message}`);
+        throw new Error(`Error reading file: ${error.message}`);
     }
+}
+
+// Logger function to format logs
+function logMessage(message) {
+    const pad = (n,s=2) => (`${new Array(s).fill(0)}${n}`).slice(-s);
+    const d = new Date();
+    
+    const timestamp = `${pad(d.getFullYear(),4)}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  
+    //const timestamp = new Date().toUTCString();
+    console.log(`[${timestamp}] - ${message}`);
 }
 
 // Quotes in .txt files should be formatted as following
@@ -97,9 +115,12 @@ app.get("/quotes/:filename", async (req, res) => {
         const filePath = await findFile(filename);
         const randomLine = await getRandomLine(filePath);
         const parsedLine = parse(randomLine);
+        const responseData = { author: parsedLine[0], quote: parsedLine[1] };
 
-        return res.json({ author: parsedLine[0], quote: parsedLine[1] });
-    } catch (error) {   
+        logMessage(`Response JSON: ${JSON.stringify(responseData)}`);
+        return res.json(responseData);
+    } catch (error) {  
+        logMessage(error.message) 
         if (error.message.includes("not found")) {
             return res.status(404).json({ error: error.message });
         }
@@ -121,7 +142,7 @@ app.use(express.static(path.join(__dirname, "frontend")));
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`Server running on http://${DOMAIN_URL}:${PORT}`);
+        logMessage(`Server running on port ${PORT}`);
     });
 }
 

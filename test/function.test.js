@@ -9,16 +9,20 @@ jest.mock('fs', () => ({
     }
 }));
 
+beforeEach(() => {
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+});
+
+afterEach(() => {
+    jest.clearAllMocks(); // Reset mock calls after each test
+});
+
 const DEFAULT_DATA_DIR = path.resolve("data");
 const USER_DATA_DIR = path.resolve("user-data");
 
 // ToDo: Add tests for parse function
 
 describe("getRandomLine", () => {
-    afterEach(() => {
-        jest.clearAllMocks(); // Reset mock calls after each test
-    });
-
     test("returns a random line from a file", async () => {
         const mockData = "Hello\nWorld\nJest\nTesting";
         fs.readFile.mockResolvedValue(mockData);
@@ -45,10 +49,6 @@ describe("getRandomLine", () => {
 });
 
 describe("getCategories", () => {
-    afterEach(() => {
-        jest.clearAllMocks();
-    });
-
     test("returns sorted and deduplicated list of categories from both directories", async () => {    
         fs.readdir.mockImplementation(async (dir) => {
             if (dir === DEFAULT_DATA_DIR) return ["a.txt", "b.txt", "c.txt"];

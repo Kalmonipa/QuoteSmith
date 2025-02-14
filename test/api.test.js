@@ -9,6 +9,10 @@ jest.mock('fs', () => ({
     }
 }));
 
+beforeEach(() => {
+    jest.spyOn(console, 'log').mockImplementation(() => {});
+});
+
 describe("GET /:filename", () => {
     test("should return file contents for a valid .txt file", async () => {
         // ToDo: The next few lines are repeated for a few tests. Tidy them up to DRY

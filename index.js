@@ -36,10 +36,12 @@ async function getCategories() {
         const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
         const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
 
+        logMessage("=== Retrieving categories")
+
         const categories = [...new Set([...defaultFiles, ...userFiles])]
             .filter(file => {
                 if (file.endsWith(".txt")) {
-                    logMessage("Found file: " + file)
+                    logMessage("    " + file)
                     return true;
                 } else return false
             })
@@ -110,12 +112,14 @@ app.get("/quotes/:filename", async (req, res) => {
             return res.status(400).json({ error: "Path should not contain the file extension" });
         }
 
+        logMessage("Retrieving from " + filename)
+
         const filePath = await findFile(filename);
         const randomLine = await getRandomLine(filePath);
         const parsedLine = parse(randomLine);
         const responseData = { author: parsedLine[0], quote: parsedLine[1] };
 
-        logMessage(`Response JSON: ${JSON.stringify(responseData)}`);
+        logMessage(`Retrieved JSON: ${JSON.stringify(responseData)}`);
         return res.json(responseData);
     } catch (error) {  
         logMessage(error.message) 

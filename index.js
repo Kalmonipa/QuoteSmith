@@ -5,6 +5,7 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DOMAIN_URL = process.env.DOMAIN_URL || "localhost";
+const EXCLUDE_DEFAULT_FILES = process.env.EXCLUDE_DEFAULT_FILES || false;
 
 // Directories for built-in and user-provided files
 const DEFAULT_DATA_DIR = path.join(__dirname, "data");
@@ -33,13 +34,19 @@ async function findFile(filename) {
 
 async function getCategories() {
     try {
-        const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
-        const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
-
         logMessage("=== Retrieving categories")
 
-        const categories = [...new Set([...defaultFiles, ...userFiles])]
-            .filter(file => {
+        var categories = [];
+        const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
+
+        if (EXCLUDE_DEFAULT_FILES === true) {
+            categories = [...new Set([...userFiles])]
+        } else {
+            const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
+            categories = [...new Set([...defaultFiles, ...userFiles])]
+        }
+
+        categories = categories.filter(file => {
                 if (file.endsWith(".txt")) {
                     logMessage("    " + file)
                     return true;

@@ -89,7 +89,7 @@ describe("getCategories", () => {
         expect(result).toEqual(["a", "b", "c", "d"]);
     });
 
-    test("returns sorted and deduplicated list of categories from both directories", async () => {    
+    test("returns sorted and deduplicated list of categories from both unorganised directories", async () => {    
         fs.readdir.mockImplementation(async (dir) => {
             if (dir === DEFAULT_DATA_DIR) return ["o.txt", "m.txt", "l.txt"];
             if (dir === USER_DATA_DIR) return ["z.txt", "a.txt"];

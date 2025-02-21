@@ -111,6 +111,21 @@ describe("getCategories", () => {
         expect(result).toEqual(["x", "y"]);
     });
 
+    test("handles excluding default files", async () => {  
+        process.env.EXCLUDE_DEFAULT_FILES = "true";
+
+        fs.readdir.mockImplementation(async (dir) => {
+            if (dir === DEFAULT_DATA_DIR) return ["a.txt", "b.txt", "c.txt"];
+            if (dir === USER_DATA_DIR) return ["b.txt", "d.txt"];
+            return [];
+        });
+    
+        const result = await getCategories();
+        expect(result).toEqual(["b", "d"]);
+
+        delete process.env.EXCLUDE_DEFAULT_FILES;
+    });
+
     test("ignores non-txt files", async () => {
         fs.readdir.mockImplementation(async (dir) => {
             if (dir.includes(DEFAULT_DATA_DIR)) return ["valid.txt", "image.png", "note.md"];

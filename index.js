@@ -36,11 +36,12 @@ async function getCategories() {
     try {
         logMessage("=== Retrieving categories")
 
+        const excludeDefaults = process.env.EXCLUDE_DEFAULT_FILES === "true";
         var categories = [];
         const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
 
-        if (EXCLUDE_DEFAULT_FILES === true) {
-            categories = [...new Set([...userFiles])]
+        if (excludeDefaults === true) {
+            categories = [...new Set(userFiles)];
         } else {
             const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
             categories = [...new Set([...defaultFiles, ...userFiles])]

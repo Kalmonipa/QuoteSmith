@@ -73,7 +73,7 @@ describe("GET /:filename", () => {
         const res = await request(app).get("/quotes/sample");
     
         expect(res.statusCode).toBe(500);
-        expect(res.body.message).toBe("Invalid quote format");
+        expect(res.body.message).toBe("Invalid quote format: " + mockFileContent);
         expect(res.body).not.toHaveProperty("author");
         expect(res.body).not.toHaveProperty("quote");
     });
@@ -86,7 +86,7 @@ describe("GET /:filename", () => {
         const res = await request(app).get("/quotes/sample");
 
         expect(res.statusCode).toBe(500);
-        expect(res.body.message).toBe("Invalid quote format")
+        expect(res.body.message).toBe("Invalid quote format: " + mockFileContent)
         expect(res.body).not.toHaveProperty("author");
         expect(res.body).not.toHaveProperty("quote");
     });

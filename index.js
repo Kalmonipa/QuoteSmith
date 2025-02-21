@@ -33,13 +33,20 @@ async function findFile(filename) {
 
 async function getCategories() {
     try {
-        const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
-        const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
-
         logMessage("=== Retrieving categories")
 
-        const categories = [...new Set([...defaultFiles, ...userFiles])]
-            .filter(file => {
+        const excludeDefaults = process.env.EXCLUDE_DEFAULT_FILES === "true";
+        var categories = [];
+        const userFiles = await fs.readdir(USER_DATA_DIR).catch(() => []);
+
+        if (excludeDefaults === true) {
+            categories = [...new Set(userFiles)];
+        } else {
+            const defaultFiles = await fs.readdir(DEFAULT_DATA_DIR);
+            categories = [...new Set([...defaultFiles, ...userFiles])]
+        }
+
+        categories = categories.filter(file => {
                 if (file.endsWith(".txt")) {
                     logMessage("    " + file)
                     return true;
@@ -90,11 +97,16 @@ function logMessage(message) {
 // Author - "Quote"
 // This function returns an array containing the author and the quote.
 function parse(quote) {
-    const strArray = quote.split("-");
-    const trimmedArray = strArray.map(item => item.trim());
+    const strArray = quote.split(/-(.*)/s);
 
-    if (strArray.length !== 2) {
-        throw new Error("Invalid quote format");
+    const strArrayWithoutEmpty = strArray.filter(function (letter) {
+        return letter !== '';
+    });
+    
+    const trimmedArray = strArrayWithoutEmpty.map(item => item.trim());
+
+    if (trimmedArray.length !== 2) {
+        throw new Error("Invalid quote format: " + quote);
     }
 
     return trimmedArray;
@@ -148,4 +160,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { app, getRandomLine, findFile, getCategories };
+module.exports = { app, getRandomLine, findFile, getCategories, parse };

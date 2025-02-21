@@ -8,8 +8,8 @@ There are 2 endpoints available for the API.
 
 ### Adding quotes
 Files can be added in 2 ways by adding a file:
-1. to `data/` in this repo and building a new docker image. These will be embedded in every image. An option to disable these 
-will be available in a future upate.
+1. to `data/` in this repo and building a new docker image. These will be embedded in every image. Set the env 
+var `EXCLUDE_DEFAULT_FILES=true` to disable the built in files.
 2. to a local directory and mapping that dir to `/app/user-data` in the docker container. More customisable.
 
 The quotes in the file must match this format:

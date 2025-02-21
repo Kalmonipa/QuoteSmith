@@ -1,14 +1,18 @@
 ## Quotes API
 
-A simple webpage and API that returns a random quote from the specified TV Show/Movie/Book/etc.
+A simple webpage and API that returns a random quote from the chosen file. This can be used for movie/TV quotes, books or
+inspirational quotes from your favourite philosopher.
 
-![Main Page](QuoteSmith-main-page.png "Main Page")
-
-![Categories](QuoteSmith-categories.png "Categories")
 
 ### Demo
-A demo can be found at https://quotesmith.net along with the API:
+A demo can be found at https://quotesmith.net 
 
+<img src="QuoteSmith-main-page.png" alt="Main Page" width="500"/>
+
+<img src="QuoteSmith-categories.png" alt="Categories" width="500"/>
+
+
+along with the public API:
 ```
 curl https://quotesmith.net/quotes/avatar_the_last_airbender
 {

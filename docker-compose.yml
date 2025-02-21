@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
+    # Uncomment the environment variables to disable the built in files
+    # environment:
+    #   - EXCLUDE_DEFAULT_FILES=true
     volumes:
       # Map a directory to /app/user-data to add your own quotes
       - ~/Docker/QuoteSmith/data:/app/user-data

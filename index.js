@@ -5,7 +5,6 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DOMAIN_URL = process.env.DOMAIN_URL || "localhost";
-const EXCLUDE_DEFAULT_FILES = process.env.EXCLUDE_DEFAULT_FILES || false;
 
 // Directories for built-in and user-provided files
 const DEFAULT_DATA_DIR = path.join(__dirname, "data");

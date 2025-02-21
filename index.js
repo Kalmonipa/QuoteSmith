@@ -90,11 +90,16 @@ function logMessage(message) {
 // Author - "Quote"
 // This function returns an array containing the author and the quote.
 function parse(quote) {
-    const strArray = quote.split("-");
-    const trimmedArray = strArray.map(item => item.trim());
+    const strArray = quote.split(/-(.*)/s);
 
-    if (strArray.length !== 2) {
-        throw new Error("Invalid quote format");
+    const strArrayWithoutEmpty = strArray.filter(function (letter) {
+        return letter !== '';
+    });
+    
+    const trimmedArray = strArrayWithoutEmpty.map(item => item.trim());
+
+    if (trimmedArray.length !== 2) {
+        throw new Error("Invalid quote format: " + quote);
     }
 
     return trimmedArray;
@@ -148,4 +153,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { app, getRandomLine, findFile, getCategories };
+module.exports = { app, getRandomLine, findFile, getCategories, parse };

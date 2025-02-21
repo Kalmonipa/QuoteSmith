@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
-const { getRandomLine, getCategories } = require('../index');
+const { getRandomLine, getCategories, parse } = require('../index');
 
 jest.mock('fs', () => ({
     promises: {
@@ -47,6 +47,35 @@ describe("getRandomLine", () => {
         expect(fs.readFile).toHaveBeenCalledWith("nonexistent.txt", "utf8");
     });
 });
+
+describe("parseLines", () => {
+    test("should parse the line and return an array", async () => {
+        const mockedLine = "Plato - The right question is usually more important than the right answer"
+
+        const parsedLine = parse(mockedLine)
+
+        expect(parsedLine[0]).toEqual("Plato")
+        expect(parsedLine[1]).toEqual("The right question is usually more important than the right answer")
+    })
+    test("should parse the line with multiple hyphens and return an array", async () => {
+        const mockedLine = "Marcus Aurelius - Do not be wise in words - be wise in deeds."
+
+        const parsedLine = parse(mockedLine)
+
+        expect(parsedLine[0]).toEqual("Marcus Aurelius")
+        expect(parsedLine[1]).toEqual("Do not be wise in words - be wise in deeds.")
+    })
+    test("should fail to parse missing author", async () => {
+        const mockedLine = "- This should fail"
+
+        expect(() => parse(mockedLine)).toThrow("Invalid quote format: - This should fail")
+    })
+    test("should fail to parse missing quote", async () => {
+        const mockedLine = "This should fail -"
+
+        expect(() => parse(mockedLine)).toThrow("Invalid quote format: This should fail -")
+    })
+})
 
 describe("getCategories", () => {
     test("returns sorted and deduplicated list of categories from both directories", async () => {    

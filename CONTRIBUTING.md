@@ -16,12 +16,6 @@ The quotes in the file must match this format:
 `[Author] [Hyphen] [Quote]`
 Refer to the `data/` folder for examples.
 
-### Self hosting
-The recommended way to run is via a Docker container. Refer to [docker-compose.yml](docker-compose.yml) for an example compose file.
-
-To add your own custom quotes, map a directory to the specified path in the container and add in the .txt files with the quotes. 
-They must be in the format specified above.
-
 ### Running locally
 Pull the repo and run `npm start`.
 
@@ -32,5 +26,5 @@ There are tests which can be run by running `npm test`. If you are submitting a 
 for your code and make sure all tests pass.
 
 ### ToDo:
-- [ ] Provide option to exclude embedded files.
+- [x] Provide option to exclude embedded files.
 - [ ] Add lots more TV shows, movies, books

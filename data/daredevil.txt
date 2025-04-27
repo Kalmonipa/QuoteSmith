@@ -1,40 +1,40 @@
-Matt Murdock - "I'm not seeking penance for what I've done, Father. I'm asking for forgiveness for what I'm about to do."
-Wilson Fisk - "I am the ill intent who set upon the traveler on a road that he should not have been on."
-Matt Murdock - "In my experience, fear is the only language men like you understand."
-Foggy Nelson - "Just because you can't see me doesn't mean I'm not here."
-Karen Page - "We don't need to do bad things to do good, Matt."
-Wilson Fisk - "This city doesn't deserve a better tomorrow. It deserves to drown in its filth."
-Matt Murdock - "Sometimes it's better to ask forgiveness than permission."
-Claire Temple - "Most people are happy just to get through the day without being mugged."
-Stick - "Emotions are a distraction. Anger clouds the mind."
-Frank Castle - "You hit them and they get back up, I hit them and they stay down."
-Matt Murdock - "I'm not trying to be a hero. I'm just a guy who got fed up with men like you and I decided to do something about it."
-Wilson Fisk - "I think I'm something else entirely."
-Karen Page - "The truth has a way of coming out, doesn't it?"
-Foggy Nelson - "The only thing I know for sure about Matt Murdock is that I don't know anything about Matt Murdock for sure."
-Matt Murdock - "I know my soul is damned if I take his life. But if I stand idle, if I... if I let him consume this city, all the people that will suffer and die..."
-Father Lantom - "Another man's evil does not make you good."
-Wilson Fisk - "I've done things that I'm not proud of, Vanessa. I've hurt people, and I'm going to hurt more."
-Claire Temple - "People like you... you're the reason people like him exist."
-Matt Murdock - "You don't get to destroy who I am."
-Frank Castle - "You know what I think of you, Red? I think you're a half-measure."
-Elektra Natchios - "There is no light without dark. No purity without filth."
-Matt Murdock - "I have to believe that when life's bad, there's good to be found."
-Karen Page - "We're all just one step away from the person we don't want to be."
-Stick - "Blind warriors. In a paradise like this, you must be fighters to survive."
-Matt Murdock - "Violence doesn't discriminate. It comes as cold and bracing as a winter rain, and it leaves you with nothing but a bitter taste of your own blood."
-Wilson Fisk - "When I was a boy, I realized what I had to do. I took the hammer and I hit him in the head again and again until he was dead."
-Foggy Nelson - "Heroes and their consequences are why we have our current opportunities."
-Matt Murdock - "I'd rather die as the Devil than live as Matt Murdock."
-Claire Temple - "The only people who wear masks are either jerks or people in pain."
-Nobu - "There is no honor in killing an unarmed man."
-Ben Urich - "When I take aim at a story, I hit where I'm aiming."
-Matt Murdock - "You don't get to decide who deserves to live and die."
-Wilson Fisk - "It's a cruel world, James. Full of chaos and pain. People like you and I bring order to that chaos."
-Elektra Natchios - "This is who I am. Would you really want me to pretend to be anything else?"
-Frank Castle - "You know you're one bad day away from being me."
-Matt Murdock - "Sometimes we're damned if we do, but we're always damned if we don't."
-Foggy Nelson - "I look at you and I see my best friend. The guy who'd give me the shirt off his back. The man I trust with everything I have."
-Matt Murdock - "No one touches my city."
-Karen Page - "If we don't stand up to those who hurt the people we care about, then what does that make us?"
-Stick - "The war is bigger than you, bigger than all of us."
+Matt Murdock - I'm not seeking penance for what I've done, Father. I'm asking for forgiveness for what I'm about to do.
+Wilson Fisk - I am the ill intent who set upon the traveler on a road that he should not have been on.
+Matt Murdock - In my experience, fear is the only language men like you understand.
+Foggy Nelson - Just because you can't see me doesn't mean I'm not here.
+Karen Page - We don't need to do bad things to do good, Matt.
+Wilson Fisk - This city doesn't deserve a better tomorrow. It deserves to drown in its filth.
+Matt Murdock - Sometimes it's better to ask forgiveness than permission.
+Claire Temple - Most people are happy just to get through the day without being mugged.
+Stick - Emotions are a distraction. Anger clouds the mind.
+Frank Castle - You hit them and they get back up, I hit them and they stay down.
+Matt Murdock - I'm not trying to be a hero. I'm just a guy who got fed up with men like you and I decided to do something about it.
+Wilson Fisk - I think I'm something else entirely.
+Karen Page - The truth has a way of coming out, doesn't it?
+Foggy Nelson - The only thing I know for sure about Matt Murdock is that I don't know anything about Matt Murdock for sure.
+Matt Murdock - I know my soul is damned if I take his life. But if I stand idle, if I... if I let him consume this city, all the people that will suffer and die...
+Father Lantom - Another man's evil does not make you good.
+Wilson Fisk - I've done things that I'm not proud of, Vanessa. I've hurt people, and I'm going to hurt more.
+Claire Temple - People like you... you're the reason people like him exist.
+Matt Murdock - You don't get to destroy who I am.
+Frank Castle - You know what I think of you, Red? I think you're a half-measure.
+Elektra Natchios - There is no light without dark. No purity without filth.
+Matt Murdock - I have to believe that when life's bad, there's good to be found.
+Karen Page - We're all just one step away from the person we don't want to be.
+Stick - Blind warriors. In a paradise like this, you must be fighters to survive.
+Matt Murdock - Violence doesn't discriminate. It comes as cold and bracing as a winter rain, and it leaves you with nothing but a bitter taste of your own blood.
+Wilson Fisk - When I was a boy, I realized what I had to do. I took the hammer and I hit him in the head again and again until he was dead.
+Foggy Nelson - Heroes and their consequences are why we have our current opportunities.
+Matt Murdock - I'd rather die as the Devil than live as Matt Murdock.
+Claire Temple - The only people who wear masks are either jerks or people in pain.
+Nobu - There is no honor in killing an unarmed man.
+Ben Urich - When I take aim at a story, I hit where I'm aiming.
+Matt Murdock - You don't get to decide who deserves to live and die.
+Wilson Fisk - It's a cruel world, James. Full of chaos and pain. People like you and I bring order to that chaos.
+Elektra Natchios - This is who I am. Would you really want me to pretend to be anything else?
+Frank Castle - You know you're one bad day away from being me.
+Matt Murdock - Sometimes we're damned if we do, but we're always damned if we don't.
+Foggy Nelson - I look at you and I see my best friend. The guy who'd give me the shirt off his back. The man I trust with everything I have.
+Matt Murdock - No one touches my city.
+Karen Page - If we don't stand up to those who hurt the people we care about, then what does that make us?
+Stick - The war is bigger than you, bigger than all of us.

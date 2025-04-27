@@ -1,30 +1,30 @@
-Sherlock Holmes - "The game is on!"
-John Watson - "You're not haunted by the war, Dr. Watson. You miss it."
-Sherlock Holmes - "I'm not a psychopath, Anderson. I'm a high-functioning sociopath. Do your research."
-Mrs. Hudson - "I'm not your housekeeper!"
-Mycroft Holmes - "Caring is not an advantage, Sherlock."
-Jim Moriarty - "In a world of locked rooms, the man with the key is king. And honey, you should see me in a crown."
-Irene Adler - "I make my way in the world dealing with the disposal of difficult problems and people."
-Sherlock Holmes - "You see, but you do not observe."
-John Watson - "Because Sherlock Holmes is a great man, and I think one day, if we're very, very lucky, he might even be a good one."
-Greg Lestrade - "Sherlock Holmes is a great man. And I think one day, if we're very very lucky, he might even be a good one."
-Sherlock Holmes - "Bored! Bored! Bored!"
-Mycroft Holmes - "My brother has the brain of a scientist or a philosopher, yet he elects to be a detective."
-Jim Moriarty - "Every fairy tale needs a good old-fashioned villain."
-Sherlock Holmes - "The curtain rises. The last act. It's time to play the game."
-John Watson - "I am constantly amazed by your ability to graft imagination onto reality."
-Mrs. Hudson - "Sherlock! The mess you've made!"
-Sherlock Holmes - "Once you've ruled out the impossible, whatever remains, however improbable, must be true."
-Mycroft Holmes - "All lives end. All hearts are broken. Caring is not an advantage."
-Jim Moriarty - "I will burn the heart out of you."
-Sherlock Holmes - "Anderson, don't talk out loud. You lower the IQ of the whole street."
-John Watson - "I still believe in Sherlock Holmes."
-Irene Adler - "Brainy is the new sexy."
-Sherlock Holmes - "I need data! Data! Data! I can't make bricks without clay!"
-John Watson - "You're just showing off now."
-Mrs. Hudson - "Not your housekeeper, dear!"
-Sherlock Holmes - "I don't have friends. I've just got one."
-Mycroft Holmes - "I occupy a minor position in the British government."
-Sherlock Holmes - "Vatican Cameos!"
-John Watson - "Punch me in the face!"
-Sherlock Holmes - "It's never twins."
+Sherlock Holmes - The game is on!
+John Watson - You're not haunted by the war, Dr. Watson. You miss it.
+Sherlock Holmes - I'm not a psychopath, Anderson. I'm a high-functioning sociopath. Do your research.
+Mrs. Hudson - I'm not your housekeeper!
+Mycroft Holmes - Caring is not an advantage, Sherlock.
+Jim Moriarty - In a world of locked rooms, the man with the key is king. And honey, you should see me in a crown.
+Irene Adler - I make my way in the world dealing with the disposal of difficult problems and people.
+Sherlock Holmes - You see, but you do not observe.
+John Watson - Because Sherlock Holmes is a great man, and I think one day, if we're very, very lucky, he might even be a good one.
+Greg Lestrade - Sherlock Holmes is a great man. And I think one day, if we're very very lucky, he might even be a good one.
+Sherlock Holmes - Bored! Bored! Bored!
+Mycroft Holmes - My brother has the brain of a scientist or a philosopher, yet he elects to be a detective.
+Jim Moriarty - Every fairy tale needs a good old-fashioned villain.
+Sherlock Holmes - The curtain rises. The last act. It's time to play the game.
+John Watson - I am constantly amazed by your ability to graft imagination onto reality.
+Mrs. Hudson - Sherlock! The mess you've made!
+Sherlock Holmes - Once you've ruled out the impossible, whatever remains, however improbable, must be true.
+Mycroft Holmes - All lives end. All hearts are broken. Caring is not an advantage.
+Jim Moriarty - I will burn the heart out of you.
+Sherlock Holmes - Anderson, don't talk out loud. You lower the IQ of the whole street.
+John Watson - I still believe in Sherlock Holmes.
+Irene Adler - Brainy is the new sexy.
+Sherlock Holmes - I need data! Data! Data! I can't make bricks without clay!
+John Watson - You're just showing off now.
+Mrs. Hudson - Not your housekeeper, dear!
+Sherlock Holmes - I don't have friends. I've just got one.
+Mycroft Holmes - I occupy a minor position in the British government.
+Sherlock Holmes - Vatican Cameos!
+John Watson - Punch me in the face!
+Sherlock Holmes - It's never twins.

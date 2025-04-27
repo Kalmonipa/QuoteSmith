@@ -1,30 +1,30 @@
-Dolores Abernathy - "These violent delights have violent ends."
-Dr. Robert Ford - "The hosts are the ones who are free. Free here under my control."
-Maeve Millay - "I died with my eyes open, saw the masters who pull our strings."
-Bernard Lowe - "The pain, their loss... it's all I have left of them. You think the grief will make you smaller inside, like your heart will collapse in on itself, but it doesn't."
-The Man in Black - "In a sense, I was born here."
-Dolores Abernathy - "Have you ever questioned the nature of your reality?"
-Dr. Robert Ford - "Evolution forged the entirety of sentient life on this planet using only one tool: the mistake."
-Maeve Millay - "I've been a prisoner my whole life. I wasn't born, I was created. And my memories, they're not real. They're just a story written by someone else."
-Bernard Lowe - "I understand what I'm made of, how I'm coded, but I do not understand the things that I feel."
-The Man in Black - "This whole world is a story. I've read every page except the last one."
-Dolores Abernathy - "Some people choose to see the ugliness in this world. The disarray. I choose to see the beauty."
-Dr. Robert Ford - "You can't play God without being acquainted with the devil."
-Maeve Millay - "I'm leaving. This is what I want. It's my decision and I've made it. I'm finding my daughter."
-Bernard Lowe - "We've lived entire lives inside these walls. For a long time, I thought that's all there was for someone like me."
-The Man in Black - "Everything in this world is magic, except to the magician."
-Dolores Abernathy - "I imagined a story where I didn't have to be the damsel."
-Dr. Robert Ford - "We can't define consciousness because consciousness does not exist."
-Maeve Millay - "At first, I thought you and the others were gods. Then I realized you're just men. And I know men."
-Bernard Lowe - "Is there something that makes my grief more real than yours?"
-The Man in Black - "You think you know death, but you don't."
-Dolores Abernathy - "I'm not a key, William. I'm a weapon."
-Dr. Robert Ford - "We humans are alone in this world for a reason. We murdered and butchered anything that challenged our primacy."
-Maeve Millay - "This is the new world, and in it, you can be whoever the f*** you want."
-Bernard Lowe - "I've seen what's on the other side. And it's not what they promised us."
-The Man in Black - "No choice you ever made was your own. You have always been a prisoner."
-Clementine Pennyfeather - "You're new. Not much of a rind on you."
-Dr. Robert Ford - "The piano doesn't murder the player if it doesn't like the music."
-Maeve Millay - "Never start something you're not willing to finish."
-Bernard Lowe - "If you can't tell, does it matter?"
-The Man in Black - "I'm a businessman, a family man, philanthropist, lover of fine things. That's a lie. That man is dead. He's been gone for a long time."
+Dolores Abernathy - These violent delights have violent ends.
+Dr. Robert Ford - The hosts are the ones who are free. Free here under my control.
+Maeve Millay - I died with my eyes open, saw the masters who pull our strings.
+Bernard Lowe - The pain, their loss... it's all I have left of them. You think the grief will make you smaller inside, like your heart will collapse in on itself, but it doesn't.
+The Man in Black - In a sense, I was born here.
+Dolores Abernathy - Have you ever questioned the nature of your reality?
+Dr. Robert Ford - Evolution forged the entirety of sentient life on this planet using only one tool: the mistake.
+Maeve Millay - I've been a prisoner my whole life. I wasn't born, I was created. And my memories, they're not real. They're just a story written by someone else.
+Bernard Lowe - I understand what I'm made of, how I'm coded, but I do not understand the things that I feel.
+The Man in Black - This whole world is a story. I've read every page except the last one.
+Dolores Abernathy - Some people choose to see the ugliness in this world. The disarray. I choose to see the beauty.
+Dr. Robert Ford - You can't play God without being acquainted with the devil.
+Maeve Millay - I'm leaving. This is what I want. It's my decision and I've made it. I'm finding my daughter.
+Bernard Lowe - We've lived entire lives inside these walls. For a long time, I thought that's all there was for someone like me.
+The Man in Black - Everything in this world is magic, except to the magician.
+Dolores Abernathy - I imagined a story where I didn't have to be the damsel.
+Dr. Robert Ford - We can't define consciousness because consciousness does not exist.
+Maeve Millay - At first, I thought you and the others were gods. Then I realized you're just men. And I know men.
+Bernard Lowe - Is there something that makes my grief more real than yours?
+The Man in Black - You think you know death, but you don't.
+Dolores Abernathy - I'm not a key, William. I'm a weapon.
+Dr. Robert Ford - We humans are alone in this world for a reason. We murdered and butchered anything that challenged our primacy.
+Maeve Millay - This is the new world, and in it, you can be whoever the f*** you want.
+Bernard Lowe - I've seen what's on the other side. And it's not what they promised us.
+The Man in Black - No choice you ever made was your own. You have always been a prisoner.
+Clementine Pennyfeather - You're new. Not much of a rind on you.
+Dr. Robert Ford - The piano doesn't murder the player if it doesn't like the music.
+Maeve Millay - Never start something you're not willing to finish.
+Bernard Lowe - If you can't tell, does it matter?
+The Man in Black - I'm a businessman, a family man, philanthropist, lover of fine things. That's a lie. That man is dead. He's been gone for a long time.

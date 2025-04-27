@@ -28,7 +28,7 @@ Saruman - The old world will burn in the fires of industry.
 Gandalf - The journey doesn’t end here. Death is just another path, one that we all must take.
 Frodo Baggins - I can’t do this, Sam.
 Aragorn - There is always hope.
-Samwise Gamgee - I made a promise, Mr. Frodo. A promise. Don't you leave him, Samwise Gamgee.
+Samwise Gamgee - I made a promise, Mr. Frodo. A promise. 'Don't you leave him, Samwise Gamgee.'
 Legolas - He’s twitching because he’s got my axe embedded in his nervous system!
 Gimli - Toss me. But don’t tell the Elf.
 Boromir - It is a gift. A gift to the foes of Mordor.
